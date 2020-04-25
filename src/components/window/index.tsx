@@ -1,10 +1,11 @@
-import React, { FC } from 'react';
+import React, { FC } from "react";
 
-import { default as Header } from './header';
-import { default as Button } from './mainButton';
-import { Container } from './styles';
+import { default as Header } from "./header";
+import { default as Picture } from "./picture";
+import { default as Button } from "./mainButton";
+import { WindowContainer, ContentContainer } from "./styles";
 
-import styled from 'styled-components';
+import styled from "styled-components";
 
 interface IWindowProps {
     readonly title: string;
@@ -13,7 +14,7 @@ interface IWindowProps {
 }
 
 function callback(): Promise<void> {
-    return new Promise((resolve) => resolve(alert('hey nong man')));
+    return new Promise((resolve) => resolve(alert("hey nong man")));
 }
 
 const ButtonContainer = styled.div`
@@ -22,22 +23,32 @@ const ButtonContainer = styled.div`
     justify-content: center;
     flex-grow: 1;
     align-items: center;
-    margin-top: 200px;
+`;
+
+const PictureContainer = styled.div`
+    margin: 20px auto 40px;
 `;
 
 const Window: FC<IWindowProps> = ({ title, shouldMinimize, shouldClose }) => {
     return (
-        <Container>
+        <WindowContainer>
             <Header
                 title={title}
                 shouldMinimize={shouldMinimize}
                 shouldClose={shouldClose}
             />
-            <ButtonContainer>
-                <Button text="OK" action={callback} />
-                <Button text="Cancel" action={callback} />
-            </ButtonContainer>
-        </Container>
+
+            <ContentContainer>
+                <PictureContainer>
+                    <Picture width={640} />
+                </PictureContainer>
+
+                <ButtonContainer>
+                    <Button text="OK" action={callback} />
+                    <Button text="Apply" action={callback} isDisabled={true} />
+                </ButtonContainer>
+            </ContentContainer>
+        </WindowContainer>
     );
 };
 

@@ -1,4 +1,4 @@
-import styled, { css } from 'styled-components';
+import styled, { css } from "styled-components";
 
 export const Row = styled.div`
     ${({ theme }) => css`
@@ -36,6 +36,6 @@ export const HeaderButton = styled.button`
         border-radius: ${theme.border.radius};
         border: ${theme.border.line};
         border-color: ${theme.border.color};
-        box-shadow: ${theme.dropShadow};
+        box-shadow: ${theme.defaultDropShadow};
     `}
 `;
