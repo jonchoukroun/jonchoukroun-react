@@ -64,7 +64,7 @@ const MainButton: FC<IMainButton> = ({ text, action, isDisabled = false }) => {
         );
     }
 
-    return button;
+    return <>{button}</>;
 };
 
 export default MainButton;

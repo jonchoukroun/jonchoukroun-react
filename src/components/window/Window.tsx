@@ -1,8 +1,8 @@
 import React, { FC } from "react";
 
-import { default as Header } from "./header";
-import { default as Picture } from "./picture";
-import { default as Button } from "./mainButton";
+import { default as Header } from "./header/Header";
+import { default as InsetImage } from "./InsetImage";
+import { default as Button } from "./mainButton/MainButton";
 import { WindowContainer, ContentContainer } from "./styles";
 
 import styled from "styled-components";
@@ -25,7 +25,7 @@ const ButtonContainer = styled.div`
     align-items: center;
 `;
 
-const PictureContainer = styled.div`
+const ImageContainer = styled.div`
     margin: 20px auto 40px;
 `;
 
@@ -39,9 +39,9 @@ const Window: FC<IWindowProps> = ({ title, shouldMinimize, shouldClose }) => {
             />
 
             <ContentContainer>
-                <PictureContainer>
-                    <Picture width={640} />
-                </PictureContainer>
+                <ImageContainer>
+                    <InsetImage width={640} />
+                </ImageContainer>
 
                 <ButtonContainer>
                     <Button text="OK" action={callback} />

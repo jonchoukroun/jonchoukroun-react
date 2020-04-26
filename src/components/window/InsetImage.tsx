@@ -28,7 +28,7 @@ const PictureContainer = styled.div`
     `}
 `;
 
-const Picture: FC<IPictureProps> = ({ srcUrl, width, height }) => {
+const InsetImage: FC<IPictureProps> = ({ srcUrl, width, height }) => {
     const pictureStyle = {
         width: width || "auto",
         height: height || "auto",
@@ -38,4 +38,4 @@ const Picture: FC<IPictureProps> = ({ srcUrl, width, height }) => {
     );
 };
 
-export default Picture;
+export default InsetImage;

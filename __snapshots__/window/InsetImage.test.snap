@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Inset image on window renders an image 1`] = `
+.c0 {
+  min-height: 200px;
+  box-shadow: -2px -2px 0px #878787, 2px 2px 0px #fbfbfb;
+  background: linear-gradient( #fbfbfb, #000080 );
+  font-size: 85px;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.1), -1px -1px 0px rgba(0,0,0,0.5);
+  color: transparent;
+  padding: 100px 25px;
+  text-align: center;
+}
+
+<div
+  className="c0"
+  style={
+    Object {
+      "height": "auto",
+      "width": "auto",
+    }
+  }
+>
+  Jon Choukroun
+</div>
+`;

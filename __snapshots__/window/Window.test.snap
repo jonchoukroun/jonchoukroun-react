@@ -1,0 +1,283 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Window component renders a header 1`] = `
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0px 3px;
+  background-color: #000080;
+}
+
+.c2 {
+  margin: 0;
+  color: #fbfbfb;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+}
+
+.c4 {
+  height: 22px;
+  width: 26px;
+  margin: 1px;
+  padding: 0 3px;
+  background-color: #c0c0c0;
+  color: #141414;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0;
+  border-radius: 0;
+  border: 2px solid;
+  border-color: #f8f8f8 #7f787f #7f787f #f8f8f8;
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+}
+
+.c3 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+}
+
+.c7 {
+  min-height: 200px;
+  box-shadow: -2px -2px 0px #878787, 2px 2px 0px #fbfbfb;
+  background: linear-gradient( #fbfbfb, #000080 );
+  font-size: 85px;
+  text-shadow: 1px 1px 0px rgba(255,255,255,0.1), -1px -1px 0px rgba(0,0,0,0.5);
+  color: transparent;
+  padding: 100px 25px;
+  text-align: center;
+}
+
+.c9 {
+  height: 35px;
+  width: 150px;
+  margin: 1px;
+  padding: 0;
+  background-color: #c0c0c0;
+  color: #141414;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  border-radius: 0;
+  border: 2px solid;
+  border-color: #f8f8f8 #7f787f #7f787f #f8f8f8;
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+  -webkit-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+
+.c9:hover {
+  box-shadow: 1px 1px 0px 3px rgba(0,0,0,0.7);
+  -webkit-transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease;
+}
+
+.c11 {
+  height: 35px;
+  width: 150px;
+  margin: 1px;
+  padding: 0;
+  background-color: #c0c0c0;
+  color: #141414;
+  font-family: sans-serif;
+  font-weight: 200;
+  font-size: 20px;
+  border-radius: 0;
+  border: 2px solid;
+  border-color: #f8f8f8 #7f787f #7f787f #f8f8f8;
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+  -webkit-transition: box-shadow 0.2s ease;
+  transition: box-shadow 0.2s ease;
+}
+
+.c11:hover {
+  box-shadow: 1px 1px 0px 3px rgba(0,0,0,0.7);
+  -webkit-transition: box-shadow 0.1s ease;
+  transition: box-shadow 0.1s ease;
+}
+
+.c11:hover {
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+}
+
+.c10 {
+  margin: 2px;
+  padding: 2px;
+}
+
+.c10:active {
+  border: 1px dotted black;
+}
+
+.c12 {
+  margin: 2px;
+  padding: 2px;
+  color: transparent;
+  text-shadow: 1px 1px 0 rgba(255,255,255,0.3), 0px 0px 0 rgba(135,135,135,0.7);
+}
+
+.c12:active {
+  border: 1px dotted black;
+}
+
+.c12:active {
+  border: none;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  min-width: 200px;
+  min-width: 480px;
+  padding: 2px;
+  background-color: #c0c0c0;
+  border: 2px solid;
+  border-color: #f8f8f8 #7f787f #7f787f #f8f8f8;
+  border-radius: 0;
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+}
+
+.c5 {
+  height: auto;
+  margin: 20px;
+}
+
+.c8 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-flex: 1;
+  -webkit-flex-grow: 1;
+  -ms-flex-positive: 1;
+  flex-grow: 1;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+.c6 {
+  margin: 20px auto 40px;
+}
+
+<div
+  className="c0"
+>
+  <div
+    className="c1"
+  >
+    <h4
+      className="c2"
+    >
+      Hey nong man
+    </h4>
+    <div
+      className="c3"
+    >
+      <button
+        className="c4"
+      >
+        -
+      </button>
+    </div>
+  </div>
+  <div
+    className="c5"
+  >
+    <div
+      className="c6"
+    >
+      <div
+        className="c7"
+        style={
+          Object {
+            "height": "auto",
+            "width": 640,
+          }
+        }
+      >
+        Jon Choukroun
+      </div>
+    </div>
+    <div
+      className="c8"
+    >
+      <button
+        className="c9"
+        onClick={[Function]}
+      >
+        <div
+          className="c10"
+        >
+          <span
+            style={
+              Object {
+                "textDecoration": "underline",
+              }
+            }
+          >
+            O
+          </span>
+          K
+        </div>
+      </button>
+      <button
+        className="c11"
+        disabled={true}
+      >
+        <div
+          className="c12"
+        >
+          <span
+            style={
+              Object {
+                "textDecoration": "underline",
+              }
+            }
+          >
+            A
+          </span>
+          pply
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

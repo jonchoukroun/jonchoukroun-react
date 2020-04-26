@@ -1,0 +1,226 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Window header renders both buttons 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0px 3px;
+  background-color: #000080;
+}
+
+.c1 {
+  margin: 0;
+  color: #fbfbfb;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+}
+
+.c3 {
+  height: 22px;
+  width: 26px;
+  margin: 1px;
+  padding: 0 3px;
+  background-color: #c0c0c0;
+  color: #141414;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0;
+  border-radius: 0;
+  border: 2px solid;
+  border-color: #f8f8f8 #7f787f #7f787f #f8f8f8;
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+}
+
+<div
+  className="c0"
+>
+  <h4
+    className="c1"
+  >
+    Hey nong man
+  </h4>
+  <div
+    className="c2"
+  >
+    <button
+      className="c3"
+    >
+      -
+    </button>
+    <button
+      className="c3"
+    >
+      ×
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Window header renders the close button 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0px 3px;
+  background-color: #000080;
+}
+
+.c1 {
+  margin: 0;
+  color: #fbfbfb;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+}
+
+.c3 {
+  height: 22px;
+  width: 26px;
+  margin: 1px;
+  padding: 0 3px;
+  background-color: #c0c0c0;
+  color: #141414;
+  font-family: sans-serif;
+  font-weight: 400;
+  font-size: 28px;
+  line-height: 0;
+  border-radius: 0;
+  border: 2px solid;
+  border-color: #f8f8f8 #7f787f #7f787f #f8f8f8;
+  box-shadow: 1px 2px 0px 1px rgba(20,20,20,0.7);
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+}
+
+<div
+  className="c0"
+>
+  <h4
+    className="c1"
+  >
+    Hey nong man
+  </h4>
+  <div
+    className="c2"
+  >
+    <button
+      className="c3"
+    >
+      ×
+    </button>
+  </div>
+</div>
+`;
+
+exports[`Window header renders the title and no buttons 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  height: 30px;
+  padding: 0px 3px;
+  background-color: #000080;
+}
+
+.c1 {
+  margin: 0;
+  color: #fbfbfb;
+  font-weight: 500;
+  -webkit-letter-spacing: 1.25px;
+  -moz-letter-spacing: 1.25px;
+  -ms-letter-spacing: 1.25px;
+  letter-spacing: 1.25px;
+}
+
+.c2 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  height: auto;
+  width: auto;
+}
+
+<div
+  className="c0"
+>
+  <h4
+    className="c1"
+  >
+    Hey nong man
+  </h4>
+  <div
+    className="c2"
+  />
+</div>
+`;
