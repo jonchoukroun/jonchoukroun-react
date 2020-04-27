@@ -3,7 +3,7 @@ import ReactDOM from "react-dom";
 import { ThemeProvider } from "styled-components";
 
 import { Window } from "./components";
-import { unregister } from "./core/serviceWorker";
+import { unregister } from "./serviceWorker";
 import { GlobalStyles, theme } from "./styles";
 
 ReactDOM.render(

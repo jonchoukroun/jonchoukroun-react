@@ -1,0 +1,45 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a disabled button 1`] = `
+<button
+  className="sc-AxjAm sc-AxirZ iZSVCM"
+  disabled={true}
+>
+  <div
+    className="sc-AxiKw sc-AxhCb kPSxiJ"
+  >
+    <span
+      style={
+        Object {
+          "textDecoration": "underline",
+        }
+      }
+    >
+      f
+    </span>
+    larg
+  </div>
+</button>
+`;
+
+exports[`renders the button text 1`] = `
+<button
+  className="sc-AxjAm kYJXck"
+  onClick={[Function]}
+>
+  <div
+    className="sc-AxiKw iwcMmu"
+  >
+    <span
+      style={
+        Object {
+          "textDecoration": "underline",
+        }
+      }
+    >
+      f
+    </span>
+    larg
+  </div>
+</button>
+`;

@@ -1,0 +1,87 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders a header 1`] = `
+<div
+  className="sc-fzozJi cBGTDc"
+>
+  <div
+    className="sc-AxjAm fnUNlU"
+  >
+    <h4
+      className="sc-AxirZ bpGOUS"
+    >
+      Hey nong man
+    </h4>
+    <div
+      className="sc-AxhCb liSLKZ"
+    >
+      <button
+        className="sc-AxiKw hbMXWK"
+      >
+        -
+      </button>
+    </div>
+  </div>
+  <div
+    className="sc-fzoLsD kqoSOU"
+  >
+    <div
+      className="sc-fzplWN dTgfLt"
+    >
+      <div
+        className="sc-AxhUy iIfbzS"
+        style={
+          Object {
+            "height": "auto",
+            "width": 640,
+          }
+        }
+      >
+        Jon Choukroun
+      </div>
+    </div>
+    <div
+      className="sc-fzpans blSAuB"
+    >
+      <button
+        className="sc-AxgMl hntEic"
+        onClick={[Function]}
+      >
+        <div
+          className="sc-Axmtr ijtAQs"
+        >
+          <span
+            style={
+              Object {
+                "textDecoration": "underline",
+              }
+            }
+          >
+            O
+          </span>
+          K
+        </div>
+      </button>
+      <button
+        className="sc-AxgMl sc-AxheI keXijp"
+        disabled={true}
+      >
+        <div
+          className="sc-Axmtr sc-AxmLO EYcpO"
+        >
+          <span
+            style={
+              Object {
+                "textDecoration": "underline",
+              }
+            }
+          >
+            A
+          </span>
+          pply
+        </div>
+      </button>
+    </div>
+  </div>
+</div>
+`;

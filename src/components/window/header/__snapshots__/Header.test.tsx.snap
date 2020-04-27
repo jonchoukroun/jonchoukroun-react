@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders both buttons 1`] = `
+<div
+  className="sc-AxjAm fnUNlU"
+>
+  <h4
+    className="sc-AxirZ bpGOUS"
+  >
+    Hey nong man
+  </h4>
+  <div
+    className="sc-AxhCb liSLKZ"
+  >
+    <button
+      className="sc-AxiKw hbMXWK"
+    >
+      -
+    </button>
+    <button
+      className="sc-AxiKw hbMXWK"
+    >
+      ×
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders the close button 1`] = `
+<div
+  className="sc-AxjAm fnUNlU"
+>
+  <h4
+    className="sc-AxirZ bpGOUS"
+  >
+    Hey nong man
+  </h4>
+  <div
+    className="sc-AxhCb liSLKZ"
+  >
+    <button
+      className="sc-AxiKw hbMXWK"
+    >
+      ×
+    </button>
+  </div>
+</div>
+`;
+
+exports[`renders the title and no buttons 1`] = `
+<div
+  className="sc-AxjAm fnUNlU"
+>
+  <h4
+    className="sc-AxirZ bpGOUS"
+  >
+    Hey nong man
+  </h4>
+  <div
+    className="sc-AxhCb liSLKZ"
+  />
+</div>
+`;
