@@ -3,7 +3,7 @@ import Button from "./MainButton";
 import renderer from "react-test-renderer";
 import { shallow } from "enzyme";
 
-import theme from "../../../styles/theme";
+import theme from "../../styles/theme";
 import { ThemeProvider } from "styled-components";
 
 function emptyCallback(): Promise<void> {
