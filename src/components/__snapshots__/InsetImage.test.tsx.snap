@@ -2,7 +2,7 @@
 
 exports[`renders an image 1`] = `
 <div
-  className="sc-AxjAm eNRbMk"
+  className="sc-AxjAm iELqXV"
   style={
     Object {
       "height": "auto",
@@ -10,6 +10,15 @@ exports[`renders an image 1`] = `
     }
   }
 >
-  Jon Choukroun
+  <svg
+    viewBox="0 0 300 24"
+  >
+    <text
+      lengthAdjust="spacing"
+      textLength="290"
+      x="5"
+      y="15"
+    />
+  </svg>
 </div>
 `;

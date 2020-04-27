@@ -29,7 +29,7 @@ exports[`renders a header 1`] = `
       className="sc-fzplWN dTgfLt"
     >
       <div
-        className="sc-AxhUy iIfbzS"
+        className="sc-AxhUy hLvar"
         style={
           Object {
             "height": "auto",
@@ -37,7 +37,18 @@ exports[`renders a header 1`] = `
           }
         }
       >
-        Jon Choukroun
+        <svg
+          viewBox="0 0 300 24"
+        >
+          <text
+            lengthAdjust="spacing"
+            textLength="290"
+            x="5"
+            y="15"
+          >
+            Jon Choukroun | Home
+          </text>
+        </svg>
       </div>
     </div>
     <div
@@ -60,25 +71,6 @@ exports[`renders a header 1`] = `
             O
           </span>
           K
-        </div>
-      </button>
-      <button
-        className="sc-AxgMl sc-AxheI keXijp"
-        disabled={true}
-      >
-        <div
-          className="sc-Axmtr sc-AxmLO EYcpO"
-        >
-          <span
-            style={
-              Object {
-                "textDecoration": "underline",
-              }
-            }
-          >
-            A
-          </span>
-          pply
         </div>
       </button>
     </div>
