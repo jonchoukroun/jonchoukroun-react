@@ -4,8 +4,11 @@ export const WindowContainer = styled.div`
     ${({ theme }) => css`
         display: flex;
         flex-direction: column;
-        min-width: 200px;
-        min-width: 480px;
+        /* TODO: remove when implementing minimize & close */
+        /* min-width: 200px;
+        min-width: 480px; */
+        width: 80%;
+        height: 80%;
         padding: 2px;
         background-color: ${theme.colors.gray};
         border: ${theme.border.line};
@@ -17,5 +20,5 @@ export const WindowContainer = styled.div`
 
 export const ContentContainer = styled.div`
     height: auto;
-    margin: 20px;
+    margin: 2px;
 `;
