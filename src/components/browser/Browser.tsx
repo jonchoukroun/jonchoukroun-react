@@ -1,5 +1,6 @@
 import React, { FC, useState, ChangeEvent } from "react";
 import { default as Window } from "../window/Window";
+import { default as WelcomeScreen } from "./WelcomeScreen";
 
 import { AddressBar, PageViewer } from "./styles";
 
@@ -92,6 +93,8 @@ async function fetchUrl(
     maxYear = DEFAULT_MAX_YEAR
 ) {
     // First clear browser
+    const welcomeScreen = document.getElementById("welcome-screen");
+    if (welcomeScreen) welcomeScreen.remove();
     const oldFrame = document.querySelector("#page-viewer iframe");
     if (oldFrame) oldFrame.remove();
 
@@ -148,7 +151,9 @@ const Browser: FC = () => {
                 <p>Address</p>
                 <Form onSubmitInput={fetchUrl} />
             </AddressBar>
-            <PageViewer id="page-viewer" />
+            <PageViewer id="page-viewer">
+                <WelcomeScreen />
+            </PageViewer>
         </Window>
     );
 };
