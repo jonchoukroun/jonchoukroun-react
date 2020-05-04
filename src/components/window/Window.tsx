@@ -1,11 +1,7 @@
-import React, { FC, useState } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { default as Header } from "./header/Header";
-import { default as InsetImage } from "../InsetImage";
-import { default as Button } from "../mainButton/MainButton";
 import { WindowContainer, ContentContainer } from "./styles";
-
-import styled from "styled-components";
 
 interface IWindowProps {
     readonly title: string;
@@ -13,41 +9,36 @@ interface IWindowProps {
     readonly shouldClose: boolean;
 }
 
-const ButtonContainer = styled.div`
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    flex-grow: 1;
-    align-items: center;
-`;
+const Window: FC<IWindowProps> = ({
+    title,
+    shouldMinimize,
+    shouldClose,
+    children,
+}) => {
+    const [dimensions, setDimensions] = useState({
+        width: window.innerWidth - 8,
+        height: window.innerHeight - 8,
+    });
 
-const ImageContainer = styled.div`
-    margin: 20px auto 40px;
-`;
+    useEffect(() => {
+        function handleResize(): void {
+            setDimensions({
+                width: window.innerWidth - 8,
+                height: window.innerHeight - 8,
+            });
+        }
 
-const Window: FC<IWindowProps> = ({ title, shouldMinimize, shouldClose }) => {
-    const [imageText, setImageText] = useState("Jon Choukroun | Home");
-    const callback = (): Promise<void> => {
-        setImageText("Coming soon...");
-        return new Promise((res) => res());
-    };
+        window.addEventListener("resize", handleResize);
+    });
+
     return (
-        <WindowContainer>
+        <WindowContainer width={dimensions.width} height={dimensions.height}>
             <Header
                 title={title}
                 shouldMinimize={shouldMinimize}
                 shouldClose={shouldClose}
             />
-
-            <ContentContainer>
-                <ImageContainer>
-                    <InsetImage width={640} textOverlay={imageText} />
-                </ImageContainer>
-
-                <ButtonContainer>
-                    <Button text="OK" action={callback} />
-                </ButtonContainer>
-            </ContentContainer>
+            <ContentContainer>{children}</ContentContainer>
         </WindowContainer>
     );
 };

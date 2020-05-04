@@ -1,12 +1,18 @@
 import styled, { css } from "styled-components";
 
-export const WindowContainer = styled.div`
+interface IWindowContainerProps {
+    width: number;
+    height: number;
+}
+
+export const WindowContainer = styled.div<IWindowContainerProps>`
+    display: flex;
+    flex-direction: column;
+    width: ${(props) => `${props.width}px`};
+    height: ${(props) => `${props.height}px`};
+    padding: 2px;
+
     ${({ theme }) => css`
-        display: flex;
-        flex-direction: column;
-        min-width: 200px;
-        min-width: 480px;
-        padding: 2px;
         background-color: ${theme.colors.gray};
         border: ${theme.border.line};
         border-color: ${theme.border.color};
@@ -16,6 +22,8 @@ export const WindowContainer = styled.div`
 `;
 
 export const ContentContainer = styled.div`
-    height: auto;
-    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    margin: 2px;
 `;
