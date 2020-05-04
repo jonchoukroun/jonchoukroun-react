@@ -1,74 +1,116 @@
 import React, { FC, useState, ChangeEvent } from "react";
 import { default as Window } from "../window/Window";
 
-import styled, { css } from "styled-components";
+import { AddressBar, PageViewer } from "./styles";
+
+import $ from "jquery";
 
 interface IFormProps {
     onSubmitInput: (_: any) => void;
 }
 
-interface IFrameProps {
-    title: string;
-    url: string;
+enum RejectionReason {
+    SnapshotTooRecent,
+    StatusNotOK,
+    Unavailable,
+    InvalidResponsePayload,
 }
 
-const AddressBar = styled.div`
-    ${({ theme }) => css`
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: start;
-        margin: 0;
-        padding: 10px;
-        border: ${theme.border.line};
-        border-radius: ${theme.border.radius};
-        border-top-color: ${theme.colors.white};
-        border-bottom-color: ${theme.colors.darkGray};
+interface SnapshotResult {
+    result: "Success" | "Failed";
+    snapshotUrl?: string;
+    reason?: RejectionReason;
+}
 
-        p {
-            margin: 0;
-            text-align: left;
-        }
+interface SnapshotResponse {
+    available: string;
+    url: string;
+    timestamp: string;
+    status: string;
+}
 
-        input {
-            margin: 0 10px;
-            flex-grow: 1;
-        }
-    `}
-`;
+const DEFAULT_TIMESTAMP = 1999;
+const DEFAULT_MAX_YEAR = 2007;
 
-const PageViewer = styled.div`
-    ${({ theme }) => css`
-        display: flex;
-        flex-direction: column;
-        flex-grow: 1;
-        height: 70vh;
-        background-color: ${theme.colors.white};
+function validateUrl(json: any, maxYear: number): SnapshotResult {
+    if (!json["archived_snapshots"])
+        return {
+            result: "Failed",
+            reason: RejectionReason.InvalidResponsePayload,
+        };
 
-        iframe {
-            height: 100%;
-        }
-    `}
-`;
+    const snapshots = json["archived_snapshots"];
+    if (!snapshots["closest"])
+        return { result: "Failed", reason: RejectionReason.Unavailable };
 
-async function fetchUrl(url: string) {
-    // Check Availability
-    const endpoint = `http://archive.org/wayback/available?url=${url}`;
-    const response = await fetch(endpoint, { mode: "no-cors" });
-    console.log("!!response", response);
+    const snapshot: SnapshotResponse = snapshots["closest"];
+    const year = parseInt(snapshot.timestamp.slice(0, 4));
 
-    // Select snapshot
-    const archiveUrl = `http://web.archive.org/web/2002id_/http://www.${url}`;
+    let reason: RejectionReason | null = null;
+    if (!snapshot.available) reason = RejectionReason.Unavailable;
+    if (snapshot.status !== "200") reason = RejectionReason.StatusNotOK;
+    if (year >= maxYear) reason = RejectionReason.SnapshotTooRecent;
+    if (reason !== null) {
+        return { result: "Failed", reason: reason };
+    }
 
-    // First remove existing iframe
+    return { result: "Success", snapshotUrl: snapshot.url };
+}
+
+function handleFailedRequest(
+    originalUrl: string,
+    failure: RejectionReason = RejectionReason.InvalidResponsePayload,
+    maxYear: number
+) {
+    const error = document.createElement("h1");
+    switch (failure) {
+        case RejectionReason.SnapshotTooRecent:
+            if (maxYear < 2020) {
+                fetchUrl(originalUrl, DEFAULT_MAX_YEAR, 2020);
+                return;
+            }
+
+            error.innerText = "That doesn't exist yet.";
+            break;
+
+        case RejectionReason.StatusNotOK || RejectionReason.Unavailable:
+            error.innerText = "Can't GET that address.";
+            break;
+
+        case RejectionReason.InvalidResponsePayload:
+            error.innerText = "Something went wrong.";
+            break;
+    }
+
+    const container = document.getElementById("page-viewer");
+    if (container) container.appendChild(error);
+}
+
+async function fetchUrl(
+    url: string,
+    timestamp = DEFAULT_TIMESTAMP,
+    maxYear = DEFAULT_MAX_YEAR
+) {
+    // First clear browser
     const oldFrame = document.querySelector("#page-viewer iframe");
     if (oldFrame) oldFrame.remove();
+
+    // Check Availability
+    const endpoint = `http://archive.org/wayback/available`;
+    const response = await $.getJSON(
+        `${endpoint}?url=${url}&timestamp=${timestamp}&callback=?`
+    );
+    const { result, snapshotUrl, reason } = validateUrl(response, maxYear);
+    if (result === "Failed" || !snapshotUrl) {
+        // TODO: update to handle failed request
+        return handleFailedRequest(url, reason, maxYear);
+    }
 
     // Create iframe of snapshot
     const frame = document.createElement("iframe");
     frame.setAttribute("id", url);
     frame.setAttribute("title", url);
-    frame.setAttribute("src", archiveUrl);
+    frame.setAttribute("src", snapshotUrl);
 
     // Attach frame
     const container = document.getElementById("page-viewer");
@@ -76,7 +118,7 @@ async function fetchUrl(url: string) {
 }
 
 const Form: FC<IFormProps> = ({ onSubmitInput }) => {
-    const [url, setUrl] = useState("lycos.com");
+    const [url, setUrl] = useState("vh1.com");
 
     const handleChange = (event: ChangeEvent<HTMLInputElement>) => {
         setUrl(event.target.value);
